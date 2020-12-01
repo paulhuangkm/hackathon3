@@ -31,7 +31,6 @@ exports.CheckAns = async (req, res) => {
     }
     else{
         // initialize app with existing messages
-        console.log("ans = "+ans)
         for( index = 1 ; index <= ans.length ; index++){
                 	if(data[index-1].answer === ans[index-1])
                 		score++;
