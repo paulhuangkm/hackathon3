@@ -75,29 +75,10 @@ function Question() {
                   Your Score : {score} / {contents.length}
                 </div>
       
-                <div id="options" style={{display: "None"}}>
-                  {contents[current_question-1].options.length === 0 ? (
-                    <div className="each-option">
-                    </div>
-                  ) : (
-                    contents[current_question-1].options.map((op, index) => (
-                      <div className="each-option">
-                        <input
-                          type="radio"
-                          id={"q"+current_question+"_"+(index+1)}
-                          key={"q"+current_question+"_"+(index+1)}
-                          value={(index+1)}
-                          name="button"
-                          onChange={choose}
-                        />
-                        <span>{op}</span>
-                      </div>
-                    ))
-                  )}
+                <div>
                 </div>
                 
-                <div id="actions" onClick={next} style={{display: "None"}}>
-                  NEXT
+                <div>
                 </div>
               </React.Fragment> : (contents.length?
               <React.Fragment>
